@@ -1,5 +1,5 @@
 # Program Name
-Team member 1, Team member 2, Team member 3
+Wilson, Kade, Abby, Zach
 
 ## <program_name> Description
 Here is where you describe what the program does
@@ -15,7 +15,7 @@ graph TD;
 
 #### Function Diagrams
 
-| `function name1`    |               |  author     |
+| `Main`    |               |  Kade     |
 | ------------------ | ------------- | ------------ |
 | `argument:type`    | takes input from the user for ____  |              |
 | `time:integer`     | calculates ______  | outputs ____             |
