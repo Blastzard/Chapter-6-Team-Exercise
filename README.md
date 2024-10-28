@@ -1,5 +1,5 @@
 # Program Name
-Wilson, Kade, Abby, Zach
+Wilson, Kade, Abby, Zac
 
 ## <program_name> Description
 Here is where you describe what the program does
