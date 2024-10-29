@@ -94,3 +94,9 @@ graph TD;
 | `float`     | calculates if the total price   | outputs a if the user has more than 6            |
 | `float`      | takes input each day 3 times | returns foodprice|
 ***
+| `meal_eaten`    |               |    Wilson    |
+| ------------------ | ------------- | ------------ |
+| `accepts time of departure and time of arrival and number of days`    | takes input for each day 3 times using loop |              |
+| `float`     | calculates if the total price   | outputs a if the user has more than 6            |
+| `float`      | takes input each day 3 times | returns foodprice|
+***
