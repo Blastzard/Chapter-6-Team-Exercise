@@ -1,16 +1,23 @@
-# Program Name
+# Personal Income
 Wilson, Kade, Abby, Zac
 
-## <program_name> Description
-Here is where you describe what the program does
+## <chapter6Team> Description
+It gets the amount of expenses for a trip
 
 ### <program_name> Flowchart
 ```mermaid
 graph TD;
-  A-->B;
-  A-->C;
-  A-->D;
-  A-->E;
+  main-->number_of_days;
+  main-->departure;
+  main-->arrival;
+  main-->car;
+  main-->round_trip_airfare;
+  main-->miles_driven;
+  main-->Parking_fees;
+  main-->Taxi_fees;
+  main-->conference;
+  main-->hotel;
+  main-->meal_eaten;
 ```
 
 #### Function Diagrams
@@ -21,7 +28,7 @@ graph TD;
 | `time:integer`     | calculates the total travel expenses for a businessperson on a trip   | outputs the total travel expenses for a businessperson on a trip             |
 | `name:string`      |  | returns 0 |
 ***
-| `number of days`    |               |     Zac|
+| `number_of_days`    |               |     Zac|
 | ------------------ | ------------- | ------------ |
 | `accepts no arguments`    | takes input from the user for number of days  |              |
 | `int`     | calculates nothing  | outputs a new line             |
@@ -45,7 +52,7 @@ graph TD;
 | `int`     | calculates nothing  | outputs a new line             |
 | `int`      | takes input for the price of total car rentals | returns days |
 ***
-| `Round-trip airfare`    |               |     Zac   |
+| `round_trip_airfare`    |               |     Zac   |
 | ------------------ | ------------- | ------------ |
 | `accepts no arguments`    | takes input from the user for the price for airfare  |              |
 | `float`     | calculates nothing  | outputs a new line             |
@@ -81,7 +88,7 @@ graph TD;
 | `float`     | calculates the overspending amount above 90 | output what user must pay  |
 | `float`      | takes input for price per night | returns hotel |
 ***
-| `meal eaten`    |               |    Wilson    |
+| `meal_eaten`    |               |    Wilson    |
 | ------------------ | ------------- | ------------ |
 | `accepts time of departure and time of arrival and number of days`    | takes input for each day 3 times using loop |              |
 | `float`     | calculates if the total price   | outputs a if the user has more than 6            |
