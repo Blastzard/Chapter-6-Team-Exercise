@@ -22,17 +22,17 @@ graph TD;
 
 #### Function Diagrams
 
-| `Main`    |               |  Kade     |
+| `Main`    |               |          Kade         |
 | ------------------ | ------------- | ------------ |
-| `integar`    | no agruments |              |
+| `integar`    | no agruments         |              |
 | `time:integer`     | calculates the total travel expenses for a businessperson on a trip   | outputs the total travel expenses for a businessperson on a trip             |
 | `name:string`      |  | returns 0 |
 ***
-| `number_of_days`    |               |     Zac|
-| ------------------ | ------------- | ------------ |
+| `number_of_days`    |                                       |           Zac            |
+| ------------------ | -------------                     | ------------ |
 | `accepts no arguments`    | takes input from the user for number of days  |              |
 |      | calculates nothing  | outputs a new line             |
-| `int `      | takes input for number of days | returns days |
+| `int ` |     | takes input for number of days | returns days |
 ***
 | `departure`    |               |     Zac   |
 | ------------------ | ------------- | ------------ |
