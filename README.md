@@ -38,13 +38,13 @@ graph TD;
 | ------------------ | ------------- | ------------ |
 | `accepts no arguments`    | takes input from the user for number when they leave the house  |              |
 |     | calculates nothing  | outputs a new line             |
-| `string`      | takes input for leaves the house | returns departure |
+| `float`      | takes input for leaves the house | returns departure |
 ***
 | `arrival`    |               |     Zac   |
 | ------------------ | ------------- | ------------ |
 | `accepts no arguments`    | takes input from the user for what time the user get back home |              |
 |    | calculates nothing  | outputs a new line             |
-| `string`      | takes input for when the user gets back home | returns arrival |
+| `float`      | takes input for when the user gets back home | returns arrival |
 ***
 | `car`    |               |     Zac   |
 | ------------------ | ------------- | ------------ |
