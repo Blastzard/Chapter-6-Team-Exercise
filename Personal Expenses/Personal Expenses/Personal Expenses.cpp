@@ -45,20 +45,26 @@ string arrival()
 }
 float car()
 {
-	float carCosts;
+	float carCosts = -1;
 
-	cout << "What was the cost of car rentals, if any? ";
-	cin >> carCosts;
+	while (carCosts <= -1)
+	{
+		cout << "What was the cost of car rentals, if any? ";
+		cin >> carCosts;
+	}
 
 	return carCosts;
 }
 float round_trip_airfare()
 {
-	float airfare;
+	float airfare = -1;
 
-	cout << "What was the cost of any round-trip airfare, if any? ";
-	cin >> airfare;
-
+	while (airfare <= -1)
+	{
+		cout << "What was the cost of any round-trip airfare, if any? ";
+		cin >> airfare;
+	}
+	
 	return airfare;
 }
 float miles_driven()
