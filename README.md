@@ -66,13 +66,13 @@ graph TD;
 ***
 | `Parking_fees`    |               |    Wilson    |
 | ------------------ | ------------- | ------------ |
-| `accepts no arguments`    | takes input from the user for parking fees  |              |
+| `needs numberofdays`    | takes input from the user for parking fees  |              |
 |     | calculates if the user input is more than 6 then the person must pay   | outputs a if the user has more than 6            |
 | `float`      | takes input for parking fees | returns parkingfee |
 ***
 | `Taxi_fees`    |               |    abby   |
 | ------------------ | ------------- | ------------ |
-| `accepts no arguments`    | takes input for the amount of taxi fees |              |
+| `needs number of days`    | takes input for the amount of taxi fees |              |
 |     | calculates the amount per day and if user went over and output what user must pay  | output what user must pay  |
 | `float`      | takes input for price| returns taxi_fees |
 ***
@@ -84,7 +84,7 @@ graph TD;
 ***
 | `hotel`    |               |    abby   |
 | ------------------ | ------------- | ------------ |
-| `accepts no arguments`    | takes input for the amount of for lodging|              |
+| `needs number of days`    | takes input for the amount of for lodging|              |
 |    | calculates the overspending amount above 90 | output what user must pay  |
 | `float`      | takes input for price per night | returns hotel |
 ***
