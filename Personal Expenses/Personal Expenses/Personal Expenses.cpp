@@ -3,8 +3,8 @@
 #include <string>
 using namespace std;
 int number_of_days();
-string departure();
-string arrival();
+float departure();
+float arrival();
 float car();
 float round_trip_airfare();
 float miles_driven();
@@ -19,28 +19,30 @@ int main()
 }
 int number_of_days()
 {
-	int days;
-	cout << "How many days did you spend on the trip? ";
-	cin >> days;
+	int days = -1;
+
+	while (days<1)
+		cout << "How many days did you spend on the trip? ";
+		cin >> days;
 
 	return days;
 }
-string departure()
+float departure()
 {
-	string departureTime;
+	float departureTime = -1;
 	
-
-	cout << "What time did you departure on the first day of the trip? ";
-	cin >> departureTime;
+	while (departureTime < 0);
+		cout << "What time did you departure on the first day of the trip(answer in the format of 1.5, which means 1 hour and 30 minutes)? ";
+		cin >> departureTime;
 
 	return departureTime;
 }
-string arrival()
+float arrival()
 {
-	string arrivalTime;
-
-	cout << "What time did you arrive back home on the last day of the trip? ";
-	cin >> arrivalTime;
+	float arrivalTime = -1;
+	while (arrivalTime <0 )
+		cout << "What time did you arrive back home on the last day of the trip(answer in the format of 1.5, which means 1 hour and 30 minutes)? ";
+		cin >> arrivalTime;
 
 	return arrivalTime;
 }
@@ -48,7 +50,7 @@ float car()
 {
 	float carCosts = -1;
 
-	while (carCosts <= -1)
+	while (carCosts < -1)
 	{
 		cout << "What was the cost of car rentals, if any? ";
 		cin >> carCosts;
@@ -60,7 +62,7 @@ float round_trip_airfare()
 {
 	float airfare = -1;
 
-	while (airfare <= -1)
+	while (airfare < -1)
 	{
 		cout << "What was the cost of any round-trip airfare, if any? ";
 		cin >> airfare;
@@ -73,7 +75,7 @@ float miles_driven()
 	float miles=-3458945946386479;
 	while (miles <= 0);
 	{
-		cout << "How many miles were driven during your trip: ";
+		cout << "How many miles were driven during today: ";
 		cin >> miles;
 	}
 	return miles * .27;
@@ -84,7 +86,7 @@ float parking_fees(int days)
 	float parkingfees = -457898548747864;
 	while (parkingfees <= 0)
 	{
-		cout << "Input the Amount of parking fees: ";
+		cout << "Input the Amount of parking fees today: ";
 		cin >> parkingfees;
 	}
 	if (parkingfees > 6 * days)
