@@ -12,7 +12,7 @@ float parking_fees(int);
 float taxi_fees();
 float conference();
 float hotel();
-float meal_eaten();
+float meal_eaten(float, float,int);
 int main()
 {
 
@@ -32,7 +32,7 @@ float departure()
 	float departureTime = -1;
 	
 	while (departureTime < 0);
-		cout << "What time did you departure on the first day of the trip(answer in the format of 1.5, which means 1 hour and 30 minutes)? ";
+		cout << "What time did you departure on the first day of the trip(answer in the format of 1.5, which means 1 hour and 30 minutes also in 24 hour format)? ";
 		cin >> departureTime;
 
 	return departureTime;
@@ -41,7 +41,7 @@ float arrival()
 {
 	float arrivalTime = -1;
 	while (arrivalTime <0 )
-		cout << "What time did you arrive back home on the last day of the trip(answer in the format of 1.5, which means 1 hour and 30 minutes)? ";
+		cout << "What time did you arrive back home on the last day of the trip(answer in the format of 1.5, which means 1 hour and 30 minutes also in 24 hour format)? ";
 		cin >> arrivalTime;
 
 	return arrivalTime;
@@ -109,7 +109,47 @@ float hotel()
 {
 
 }
-float meal_eaten()
+float meal_eaten(float departure, float arrival, int daynumber)
 {
-
+	float breakfast=-99, lunch=-99, total=-99, dinner=-99;
+	while (breakfast < 0)
+	{
+		cout << "How much did you spend of Breakfast: ";
+		cin >> breakfast;
+	}
+	while (lunch < 0)
+	{
+		cout << "How much did you spend of Lunch: ";
+		cin >> lunch;
+	}
+	while (dinner < 0)
+	{
+		cout << "How much did you spend of Dinner: ";
+		cin >> dinner;
+	}
+	if (daynumber == 1)
+	{
+		if (departure < 7)
+		{
+			breakfast = breakfast - 9.00;
+		}
+		if (arrival > 13) {
+			lunch = lunch - 12;
+			dinner = dinner - 16;
+		}
+	}
+	else;
+	{
+		breakfast = breakfast - 9;
+		lunch = lunch - 12;
+		dinner = dinner - 16;
+	}
+	if (breakfast < 0)
+		breakfast = 0;
+	if (lunch < 0)
+		lunch = 0;
+	if (dinner < 0)
+		dinner = 0;
+	total = dinner + lunch + breakfast;
+	return total;
 }
