@@ -15,7 +15,26 @@ float hotel();
 float meal_eaten(float, float,int);
 int main()
 {
-
+	int days;
+	float FE, DT, A, CC, MD, PF, T;
+	cout << "Personal Expenses";
+	days = number_of_days();
+	FE = round_trip_airfare();
+	for (int counter = 1; counter > days; counter++)
+	{
+		MD = miles_driven();
+		PF = parking_fees();
+		T = meal_eaten()
+		if (counter == 1)
+		{
+			DT = departure();
+			CC = car();
+		}
+		if (counter == 7)
+		{
+			A = arrival();
+		}
+	}
 }
 int number_of_days()
 {
