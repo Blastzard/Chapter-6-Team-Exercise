@@ -22,15 +22,15 @@ int main()
 	FE = round_trip_airfare();
 	for (int counter = 1; counter > days; counter++)
 	{
-		MD = miles_driven();
-		PF = parking_fees();
-		T = meal_eaten()
 		if (counter == 1)
 		{
 			DT = departure();
 			A = arrival();
 			CC = car();
 		}
+		MD = miles_driven();
+		PF = parking_fees();
+		T = meal_eaten(DT,A,days);
 	}
 }
 int number_of_days()
@@ -38,8 +38,10 @@ int number_of_days()
 	int days = -1;
 
 	while (days<1)
+	{
 		cout << "How many days did you spend on the trip? ";
 		cin >> days;
+	}
 
 	return days;
 }
@@ -89,7 +91,7 @@ float round_trip_airfare()
 float miles_driven()
 {
 	float miles=-3458945946386479;
-	while (miles <= 0);
+	while (miles <= 0)
 	{
 		cout << "How many miles were driven during today: ";
 		cin >> miles;
@@ -105,8 +107,10 @@ float parking_fees()
 		cout << "Input the Amount of parking fees today: ";
 		cin >> parkingfees;
 	}
-	if (parkingfees > 6 * days)
+	if (parkingfees > 6 )
+	{
 		parkingfees = parkingfees - (6 );
+	}
 	else;
 	{
 		parkingfees = 0;
@@ -146,9 +150,9 @@ float conference()
 }
 float hotel()
 {
-	hotelfees = -1;
+	float hotelfees = -1;
 
-	while (hotelfees < 1);
+	while (hotelfees < 1)
 	{
 		cout << "Enter the hotel rate: ";
 		cin >> hotelfees;
@@ -157,7 +161,7 @@ float hotel()
 	{
 		hotelfees = 0;
 	}
-	else:
+	else
 	{
 		hotelfees = hotelfees - 90;
 	}
