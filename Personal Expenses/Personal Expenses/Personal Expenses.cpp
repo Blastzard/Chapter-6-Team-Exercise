@@ -8,7 +8,7 @@ float arrival();
 float car();
 float round_trip_airfare();
 float miles_driven();
-float parking_fees(int);
+float parking_fees();
 float taxi_fees();
 float conference();
 float hotel();
@@ -28,11 +28,8 @@ int main()
 		if (counter == 1)
 		{
 			DT = departure();
-			CC = car();
-		}
-		if (counter == 7)
-		{
 			A = arrival();
+			CC = car();
 		}
 	}
 }
@@ -71,7 +68,7 @@ float car()
 
 	while (carCosts < -1)
 	{
-		cout << "What was the cost of car rentals, if any? ";
+		cout << "What was the cost of car rentals, if any for the whole trip? ";
 		cin >> carCosts;
 	}
 
@@ -100,7 +97,7 @@ float miles_driven()
 	return miles * .27;
 }
 
-float parking_fees(int days)
+float parking_fees()
 {
 	float parkingfees = -457898548747864;
 	while (parkingfees <= 0)
@@ -109,7 +106,7 @@ float parking_fees(int days)
 		cin >> parkingfees;
 	}
 	if (parkingfees > 6 * days)
-		parkingfees = parkingfees - (6 * days);
+		parkingfees = parkingfees - (6 );
 	else;
 	{
 		parkingfees = 0;
@@ -118,15 +115,54 @@ float parking_fees(int days)
 }
 float taxi_fees()
 {
-	
+	float taxifees=-1;
+
+	while (taxifees	<=0 )
+	{
+		cout << "Input the amount of taxi fees for today";
+		cin >> taxifees;
+	}
+
+	taxifees = taxifees - 10;
+
+	if (taxifees < 0)
+	{
+		taxifees=0;
+	}
+	return taxifees;
 }
 float conference()
 {
+	float conferencefees=-1;
+
+	while (conferencefees < 0)
+	{
+		cout << "Enter the amount of conference fees for today: ";
+		cin >> conferencefees;
+	}
+
+	return conferencefees;
 
 }
 float hotel()
 {
+	hotelfees = -1;
 
+	while (hotelfees < 1);
+	{
+		cout << "Enter the hotel rate: ";
+		cin >> hotelfees;
+	}
+	if (hotelfees - 90 < 0)
+	{
+		hotelfees = 0;
+	}
+	else:
+	{
+		hotelfees = hotelfees - 90;
+	}
+
+	return hotelfees;
 }
 float meal_eaten(float departure, float arrival, int daynumber)
 {
