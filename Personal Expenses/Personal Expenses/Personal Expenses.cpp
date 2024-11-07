@@ -16,7 +16,7 @@ float meal_eaten(float, float,int);
 int main()
 {
 	int days;
-	float FE, DT, A, CC, MD, PF, T;
+	float FE, DT, A, CC, MD, PF, T, TF, C, H;
 	cout << "Personal Expenses";
 	days = number_of_days();
 	FE = round_trip_airfare();
@@ -31,7 +31,11 @@ int main()
 		MD = miles_driven();
 		PF = parking_fees();
 		T = meal_eaten(DT,A,days);
+		TF = taxi_fees();
+		C = conference();
+		H = hotel()
 	}
+	cout << H, C, TF, T, PF, MD, CC, A, DT;
 }
 int number_of_days()
 {
