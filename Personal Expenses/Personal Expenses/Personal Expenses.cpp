@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <iomanip>
 #include <string>
@@ -12,12 +13,12 @@ float parking_fees();
 float taxi_fees();
 float conference();
 float hotel();
-float meal_eaten(float, float,int);
+float meal_eaten(float, float, int);
 int main()
 {
 	int days;
 	float FE, DT, A, CC, MD, PF, T, TF, C, H;
-	cout << "Personal Expenses";
+	cout << "Personal Expenses\n";
 	days = number_of_days();
 	FE = round_trip_airfare();
 	for (int counter = 1; counter > days; counter++)
@@ -30,10 +31,10 @@ int main()
 		}
 		MD = miles_driven();
 		PF = parking_fees();
-		T = meal_eaten(DT,A,days);
+		T = meal_eaten(DT, A, days);
 		TF = taxi_fees();
 		C = conference();
-		H = hotel()
+		H = hotel();
 	}
 	cout << H, C, TF, T, PF, MD, CC, A, DT;
 }
@@ -41,7 +42,7 @@ int number_of_days()
 {
 	int days = -1;
 
-	while (days<1)
+	while (days < 1)
 	{
 		cout << "How many days did you spend on the trip? ";
 		cin >> days;
@@ -52,19 +53,19 @@ int number_of_days()
 float departure()
 {
 	float departureTime = -1;
-	
+
 	while (departureTime < 0);
-		cout << "What time did you departure on the first day of the trip(answer in the format of 1.5, which means 1 hour and 30 minutes also in 24 hour format)? ";
-		cin >> departureTime;
+	cout << "What time did you departure on the first day of the trip(answer in the format of 1.5, which means 1 hour and 30 minutes also in 24 hour format)? ";
+	cin >> departureTime;
 
 	return departureTime;
 }
 float arrival()
 {
 	float arrivalTime = -1;
-	while (arrivalTime <0 )
+	while (arrivalTime < 0)
 		cout << "What time did you arrive back home on the last day of the trip(answer in the format of 1.5, which means 1 hour and 30 minutes also in 24 hour format)? ";
-		cin >> arrivalTime;
+	cin >> arrivalTime;
 
 	return arrivalTime;
 }
@@ -83,18 +84,20 @@ float car()
 float round_trip_airfare()
 {
 	float airfare = -1;
+	// Personal Expenses.cpp : This file contains the 'main' function. Program execution begins and ends there.
+	//
 
 	while (airfare < -1)
 	{
 		cout << "What was the cost of any round-trip airfare, if any? ";
 		cin >> airfare;
 	}
-	
+
 	return airfare;
 }
 float miles_driven()
 {
-	float miles=-3458945946386479;
+	float miles = -3458945946386479;
 	while (miles <= 0)
 	{
 		cout << "How many miles were driven during today: ";
@@ -111,9 +114,9 @@ float parking_fees()
 		cout << "Input the Amount of parking fees today: ";
 		cin >> parkingfees;
 	}
-	if (parkingfees > 6 )
+	if (parkingfees > 6)
 	{
-		parkingfees = parkingfees - (6 );
+		parkingfees = parkingfees - (6);
 	}
 	else;
 	{
@@ -123,25 +126,26 @@ float parking_fees()
 }
 float taxi_fees()
 {
-	float taxifees=-1;
+	float taxifees = -1;
 
-	while (taxifees	<=0 )
+	while (taxifees <= 0)
 	{
 		cout << "Input the amount of taxi fees for today";
 		cin >> taxifees;
 	}
 
 	taxifees = taxifees - 10;
+#include <iostream>
 
 	if (taxifees < 0)
 	{
-		taxifees=0;
+		taxifees = 0;
 	}
 	return taxifees;
 }
 float conference()
 {
-	float conferencefees=-1;
+	float conferencefees = -1;
 
 	while (conferencefees < 0)
 	{
@@ -151,6 +155,7 @@ float conference()
 
 	return conferencefees;
 
+	std::cout << "Hello World!\n";
 }
 float hotel()
 {
@@ -169,12 +174,14 @@ float hotel()
 	{
 		hotelfees = hotelfees - 90;
 	}
+	// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
+	// Debug program: F5 or Debug > Start Debugging menu
 
 	return hotelfees;
 }
 float meal_eaten(float departure, float arrival, int daynumber)
 {
-	float breakfast=-99, lunch=-99, total=-99, dinner=-99;
+	float breakfast = -99, lunch = -99, total = -99, dinner = -99;
 	while (breakfast < 0)
 	{
 		cout << "How much did you spend of Breakfast: ";
